@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <meta name="description" content="Recipe generator is a website that shows different recipes">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script src="https://kit.fontawesome.com/6bd8df5489.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+
+    <!-- color theme picker, inspired by Kevin Powell's tutorial: https://youtu.be/fyuao3G-2qg -->
+    <form class="color_picker" action="">
+      <fieldset>
+        <legend class="visually_hidden">Pick a color theme</legend>
+        <label for="light" class="visually_hidden">Light</label>
+        <input type="radio" name="theme" id="light" checked>
+
+        <label for="pink" class="visually_hidden">Pink</label>
+        <input type="radio" name="theme" id="pink">
+
+        <label for="blue" class="visually_hidden">Blue</label>
+        <input type="radio" name="theme" id="blue">
+
+        <label for="green" class="visually_hidden">Green</label>
+        <input type="radio" name="theme" id="green">
+
+        <label for="dark" class="visually_hidden">Dark</label>
+        <input type="radio" name="theme" id="dark">
+      </fieldset>
+    </form>
+
+    <!-- navigation section -->
+    <nav class="navbar">
+      <div class="navbar_container">
+        <a href="index.html" id="navbar_logo">Recipe generator</a>
+        <div class="navbar_toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar_menu">
+          <li class="navbar_item">
+            <a href="index.html" class="navbar_links">Home</a>
+          </li>
+          <li class="navbar_item">
+            <a href="search.html" class="navbar_links">Search</a>
+          </li>
+          <li class="navbar_item">
+            <a href="randomizer.html" class="navbar_links">Randomizer</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="form_container">
+      <form action="" method="" id="form">
+        <fieldset class="cities_form" method="">
+          <legend>Add a city</legend>
+
+          <label for="get">Get cities</label>
+          <input class="input_btn" type="submit" id="getbtn" value="Get">
+
+          <label for="city">City:</label>
+          <input class="input_txt" type="text" id="name" placeholder="Enter a city">
+
+          <label for="population">Population:</label>
+          <input class="input_txt" type="text" id="population" placeholder="Enter population">
+          <br>
+          <label for="post">Add city</label>
+          <input class="input_btn" type="submit" id="postbtn" value="Add">
+          <label for="patch">Change city</label>
+
+          <select name="" id="dropdown_list">
+
+          </select>
+          <input class="input_btn" type="submit" id="patchbtn" value="Change">
+          <ul id="ul_list"></ul>
+        </fieldset>
+      </form>
+    </div>
+    <canvas id="myChart" height="300px" width="700px"></canvas>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+    integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/chart-cities.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randomizer</title>
+  <meta name="description" content="Recipe generator is a website that shows different recipes">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script src="https://kit.fontawesome.com/6bd8df5489.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+
+    <!-- color theme picker, inspired by Kevin Powell's tutorial: https://youtu.be/fyuao3G-2qg -->
+    <form class="color_picker" action="">
+      <fieldset>
+        <legend class="visually_hidden">Pick a color theme</legend>
+        <label for="light" class="visually_hidden">Light</label>
+        <input type="radio" name="theme" id="light" checked>
+
+        <label for="pink" class="visually_hidden">Pink</label>
+        <input type="radio" name="theme" id="pink">
+
+        <label for="blue" class="visually_hidden">Blue</label>
+        <input type="radio" name="theme" id="blue">
+
+        <label for="green" class="visually_hidden">Green</label>
+        <input type="radio" name="theme" id="green">
+
+        <label for="dark" class="visually_hidden">Dark</label>
+        <input type="radio" name="theme" id="dark">
+      </fieldset>
+    </form>
+
+    <!-- navigation section -->
+    <nav class="navbar">
+      <div class="navbar_container">
+        <a href="index.html" id="navbar_logo">Recipe generator</a>
+        <div class="navbar_toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar_menu">
+          <li class="navbar_item">
+            <a href="index.html" class="navbar_links">Home</a>
+          </li>
+          <li class="navbar_item">
+            <a href="search.html" class="navbar_links">Search</a>
+          </li>
+          <li class="navbar_item">
+            <a href="randomizer.html" class="navbar_links">Randomizer</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div>
+    <div class="container">
+      <div class="food_wrapper">
+        <div class="food_search">
+          <h1 class="title">Click the button to get a random recipe</h1>
+          <button type="submit" class="random_btn" id="random_btn">
+            <i class="fas fa-dice"></i>
+          </button>
+        </div>
+        <div class="food_result">
+          <h2 class="second_title"></h2>
+          <div id="food">
+          </div>
+        </div>
+
+        <div class="food_details">
+          <button type="button" class="btn recipe_close_btn" id="recipe_close_btn">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="food_details_content">
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+
+    <script src="/js/randomizer.js"></script>
+</body>
+
+</html>
