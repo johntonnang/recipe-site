@@ -61,7 +61,7 @@ function getCities() {
         let option = document.createElement("option")
         let optionlist = document.createTextNode(data[i].name)
         let name = document.createTextNode(
-          data[i].name + " " + data[i].population
+          data[i].name + " - " + data[i].population
         )
         list.appendChild(listitem)
         listitem.appendChild(name)
